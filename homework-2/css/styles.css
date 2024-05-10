@@ -150,6 +150,7 @@ ul {
 .main-title {
   color: var(--primary-color-lightblue);
   margin-bottom: 40px;
+  max-width: 529px;
   text-transform: capitalize;
   font-family: 'Play', sans-serif;
   font-size: 140px;
@@ -240,6 +241,7 @@ ul {
 
 .about-us-title {
   margin-bottom: 40px;
+  max-width: 529px;
 }
 
 .about-us-text {
