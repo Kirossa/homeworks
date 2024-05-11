@@ -101,6 +101,7 @@ ul {
 .header-container {
   display: flex;
   align-items: center;
+  height: 106px;
 }
 
 .header-nav {
@@ -121,6 +122,7 @@ ul {
   display: flex;
   gap: 32px;
   justify-content: center;
+  align-items: center;
 }
 
 .header-icon {
@@ -129,6 +131,11 @@ ul {
 
 .header-icon:hover {
   fill: var(--primary-color-lightblue);
+}
+
+.social-items {
+  width: 32px;
+  height: 32px;
 }
 
 /* Main section */
@@ -164,6 +171,7 @@ ul {
   height: 53px;
   color: var(--primary-color-white);
   font-weight: 600;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   /* Я не знаю чого не наслідується font-size з body, тож я його прописала */
   background-color: var(--primary-color-lightblue);
@@ -263,8 +271,16 @@ ul {
   font-weight: 700;
 }
 
+.about-us-photos {
+  display: grid;
+  flex-grow: 1;
+  height: 695px;
+}
+
 .photos-item {
   border-radius: 50%;
+  width: 327px;
+  height: 327px;
   margin-bottom: 40px;
 }
 
@@ -272,9 +288,23 @@ ul {
   margin-bottom: 0;
 }
 
+.before-photo {
+  justify-self: flex-start;
+}
+
+.after-photo {
+  justify-self: flex-end;
+}
+
 /* Why us section */
 .why-us-section {
   padding-top: 0;
+  background: linear-gradient(
+    38.2deg,
+    rgba(43, 127, 255, 0.2) 39.74%,
+    rgba(43, 127, 255, 0) 54.16%,
+    rgba(43, 127, 255, 0) 66.66%
+  );
 }
 
 .why-us-list {
@@ -292,6 +322,7 @@ ul {
 .why-us-advantage-card {
   background-color: var(--primary-color-white);
   border: 1px solid var(--primary-color-white);
+  box-shadow: 0px 4px 4px 0px #a8c6f561;
   border-radius: 32px;
   height: 210px;
   /* 181px висота не підходить, з нею перший елемент
