@@ -1,0 +1,47 @@
+.animation-scale {
+  position: absolute;
+  animation: scale 3s infinite linear;
+}
+
+.animation-spin-color {
+  animation: spinColor 3s infinite linear;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes spinColor {
+  0% {
+    transform: rotate(0deg);
+  }
+  35% {
+    fill: rgb(222, 238, 144);
+  }
+  38% {
+    fill: rgb(66, 69, 53);
+  }
+  40% {
+    fill: rgb(214, 218, 196);
+  }
+  43% {
+    fill: rgb(66, 69, 53);
+  }
+  45% {
+    fill: rgb(222, 238, 144);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

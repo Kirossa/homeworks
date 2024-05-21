@@ -1,0 +1,28 @@
+@import './utils/fonts';
+@import './utils/variables';
+@import './base';
+
+@import './utils/animations';
+@import './utils/mixins';
+@import './utils/texts';
+@import './utils/utils';
+@import './utils/why-us-background';
+
+@import './components/buttons';
+@import './components/carousel-button';
+@import './components/input';
+@import './components/links';
+@import './components/procedures_card';
+@import './components/why-us-advantage-card';
+
+@import './layouts/about_us_section';
+@import './layouts/contacts_section';
+@import './layouts/container';
+@import './layouts/footer';
+@import './layouts/form-terms';
+@import './layouts/header';
+@import './layouts/main_section';
+@import './layouts/modal';
+@import './layouts/pocedures_section';
+@import './layouts/section';
+@import './layouts/why-us-section';
