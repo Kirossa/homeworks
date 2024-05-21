@@ -1,0 +1,38 @@
+.contacts-section {
+  padding-bottom: 96px;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  &__map {
+    flex-shrink: 0;
+    height: 481px;
+    border: none;
+    border-radius: 32px;
+  }
+
+  &__form-bg {
+    display: flex;
+    background-color: var(--primary-color-darkblue);
+    background-image: url('../images/formBG.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-basis: 423px;
+    height: 481px;
+    border-radius: 32px;
+  }
+
+  &__form {
+    padding: 48px 0;
+    flex-basis: 310px;
+    margin: 0 auto;
+  }
+
+  &__form-field {
+    margin-bottom: 16px;
+  }
+}

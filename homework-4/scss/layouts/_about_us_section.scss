@@ -1,0 +1,67 @@
+.about-us-section {
+  padding-top: 0;
+  padding-bottom: 176px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  &__textblock {
+    max-width: 709px;
+    padding-top: 40px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    font-size: 22px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__photos {
+    position: relative;
+    display: grid;
+    flex-grow: 1;
+    height: 695px;
+  }
+
+  &__photos-item {
+    border-radius: 50%;
+    width: 327px;
+    height: 327px;
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__before-photo {
+    justify-self: flex-start;
+  }
+
+  &__after-photo {
+    justify-self: flex-end;
+  }
+
+  &__top-star {
+    @include star(32px, -22px, 40px, 40px, var(--primary-color-lightblue));
+  }
+
+  &__middle-star {
+    @include star(270px, 6px, 16px, 16px, var(--secondary-color-lightgray));
+  }
+
+  &__bottom-star {
+    @include star(340px, 295px, 64px, 64px, var(--secondary-color-darkblue));
+  }
+}

@@ -1,0 +1,15 @@
+.why-us-section {
+  padding-top: 0;
+
+  &__list {
+    max-width: 1060px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 56px;
+  }
+
+  &__item {
+    flex-basis: calc((100% - (56px * 2)) / 3);
+  }
+}

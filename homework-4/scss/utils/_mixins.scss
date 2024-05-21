@@ -1,0 +1,7 @@
+@mixin star($top, $right, $width, $height, $color) {
+  top: $top;
+  right: $right;
+  width: $width;
+  height: $height;
+  fill: $color;
+}

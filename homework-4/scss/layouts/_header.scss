@@ -1,0 +1,51 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.25);
+  /* change that */
+  backdrop-filter: blur(2px);
+  padding: 32px 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  &__nav {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 56px;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  &__contacts {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__social-items {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__icon {
+    fill: var(--primary-color-darkblue);
+    transition: fill 0.2s;
+
+    &:hover {
+      fill: var(--primary-color-lightblue);
+    }
+  }
+}

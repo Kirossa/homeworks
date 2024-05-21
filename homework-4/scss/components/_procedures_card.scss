@@ -1,0 +1,45 @@
+.procedures-card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+  background-image: linear-gradient(
+    180.05deg,
+    rgba(1, 28, 68, 0) 48.53%,
+    rgba(1, 28, 68, 0.725825) 84.61%,
+    var(--primary-color-darkblue) 101.39%
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 4px 120px;
+  height: 456px;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+    & .procedures-card__name {
+      color: var(--primary-color-white);
+    }
+  }
+
+  &__image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px 120px;
+    // поки так
+  }
+
+  &__name {
+    font-size: 22px;
+    margin-right: 77px;
+    margin-bottom: 32px;
+    width: 152px;
+    color: transparent;
+    transition: color 0.2s;
+  }
+}
