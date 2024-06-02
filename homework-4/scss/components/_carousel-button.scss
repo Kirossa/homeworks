@@ -15,7 +15,7 @@
   cursor: pointer;
   transition: background-color 0.2s, border-color 0.2s, fill 0.2s;
 
-  &--next {
+  &.next {
     transform: rotate(180deg);
   }
 
