@@ -5,3 +5,11 @@
   height: $height;
   fill: $color;
 }
+
+@mixin starTablet($bottom, $right, $width, $height, $color) {
+  bottom: $bottom;
+  right: $right;
+  width: $width;
+  height: $height;
+  fill: $color;
+}

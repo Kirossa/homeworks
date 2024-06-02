@@ -3,6 +3,7 @@
 @import './base';
 
 @import './utils/animations';
+@import './utils/hero-bg';
 @import './utils/mixins';
 @import './utils/texts';
 @import './utils/utils';
@@ -12,6 +13,7 @@
 @import './components/carousel-button';
 @import './components/input';
 @import './components/links';
+@import './components/pagination';
 @import './components/procedures_card';
 @import './components/why-us-advantage-card';
 
@@ -22,6 +24,7 @@
 @import './layouts/form-terms';
 @import './layouts/header';
 @import './layouts/main_section';
+@import './layouts/mobile-menu';
 @import './layouts/modal';
 @import './layouts/pocedures_section';
 @import './layouts/section';

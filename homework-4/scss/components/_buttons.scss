@@ -1,22 +1,30 @@
 .callback-button {
-  width: 219px;
-  height: 53px;
+  width: 186px;
+  height: 44px;
   color: var(--primary-color-white);
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  /* Я не знаю чого не наслідується font-size з body, тож я його прописала */
+  font-size: 16px;
   background-color: var(--primary-color-lightblue);
   border: 2px solid var(--primary-color-lightblue);
-  border-radius: 32px;
+  border-radius: 24px;
   cursor: pointer;
-  padding: 16px 32px;
-  margin-bottom: 14px;
+  // padding: 16px 24px;
+  margin-bottom: 8px;
   transition: background-color 0.2s, color 0.2s;
 
   &:hover {
     background-color: transparent;
     color: var(--primary-color-darkblue);
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    width: 219px;
+    height: 53px;
+    padding: 16px 32px;
+    border-radius: 32px;
+    margin-bottom: 14px;
+    font-size: 18px;
   }
 }
 

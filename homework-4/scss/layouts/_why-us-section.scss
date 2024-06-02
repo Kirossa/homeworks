@@ -5,11 +5,32 @@
     max-width: 1060px;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    gap: 30px 56px;
+    gap: 16px;
+    // justify-content: center;
+
+    @media screen and (min-width: $bp-mobile) {
+      gap: 22px;
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      gap: 26px 46px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+      gap: 30px 56px;
+    }
   }
 
   &__item {
-    flex-basis: calc((100% - (56px * 2)) / 3);
+    max-width: 316px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-basis: calc((100% - (56px * 2)) / 3);
+    }
   }
 }

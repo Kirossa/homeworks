@@ -1,17 +1,49 @@
 .contacts-section {
-  padding-bottom: 96px;
+  padding-top: 20px;
+  padding-bottom: 0;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding-top: 48px;
+    padding-bottom: 96px;
+  }
 
   &__content {
     display: flex;
     justify-content: center;
-    gap: 32px;
+    flex-direction: column-reverse;
+    gap: 24px;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      gap: 32px;
+    }
   }
 
   &__map {
+    display: flex;
     flex-shrink: 0;
-    height: 481px;
+    margin: 0 -24px;
+    min-height: 232px;
     border: none;
-    border-radius: 32px;
+
+    @media screen and (min-width: $bp-mobile) {
+      min-height: 320px;
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      max-width: 360px;
+      width: 100%;
+      height: 480px;
+      margin: 0 auto;
+      border-radius: 32px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      max-width: 600px;
+      height: 480px;
+      margin: 0 auto;
+      border-radius: 32px;
+    }
   }
 
   &__form-bg {
@@ -21,15 +53,52 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    flex-basis: 423px;
-    height: 481px;
+    min-width: 320px;
+    height: 435px;
     border-radius: 32px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $bp-mobile) {
+      flex-basis: 420px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-basis: 420px;
+      height: 480px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      min-width: 420px;
+      height: 480px;
+    }
   }
 
   &__form {
-    padding: 48px 0;
-    flex-basis: 310px;
+    padding: 42px 0;
+    flex-basis: 270px;
     margin: 0 auto;
+
+    @media screen and (min-width: $bp-tablet) {
+      padding: 46px 0;
+      flex-basis: 310px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      padding: 48px 0;
+      flex-basis: 310px;
+    }
+  }
+
+  &__input-form {
+    max-width: 240px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $bp-desktop) {
+      max-width: 310px;
+      margin: 0 auto;
+    }
   }
 
   &__form-field {

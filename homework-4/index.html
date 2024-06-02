@@ -7,6 +7,10 @@
     <title>Beauty Zone</title>
     <!-- Styles -->
     <link rel="stylesheet" href="./css/main.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -14,7 +18,11 @@
         <div class="header__container">
           <nav class="header__nav">
             <a href="/">
-              <img src="./images/logo.svg" alt="Beauty Zone's logo" />
+              <img
+                class="header__logo"
+                src="./images/logo.svg"
+                alt="Beauty Zone's logo"
+              />
             </a>
             <ul class="header__menu">
               <li><a class="link" href="#about-us-section">About us</a></li>
@@ -48,6 +56,70 @@
               </li>
             </ul>
           </nav>
+          <button class="header__burger menu-open-btn" type="button">
+            <svg width="24" height="24">
+              <use href="./images/icons.svg#icon-burger"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu">
+            <button class="mobile-menu__close-btn menu-close-btn" type="button">
+              <img src="./images/crossMenu.svg" alt="Close button" />
+            </button>
+            <div class="mobile-menu__nav">
+              <a href="/" class="header__logo">
+                <img src="./images/logo.svg" alt="Beauty Zone's logo" />
+              </a>
+              <div class="mobile-menu__container">
+                <ul class="mobile-menu__menu">
+                  <li>
+                    <a class="link menu-option1-btn" href="#about-us-section"
+                      >About us</a
+                    >
+                  </li>
+                  <li>
+                    <a class="link menu-option2-btn" href="#why-us-section"
+                      >Why us?</a
+                    >
+                  </li>
+                  <li>
+                    <a class="link menu-option3-btn" href="#procedures-section"
+                      >Our procedures</a
+                    >
+                  </li>
+                  <li>
+                    <a class="link menu-option4-btn" href="#contacts-section"
+                      >Contacts</a
+                    >
+                  </li>
+                </ul>
+                <ul class="mobile-menu__contacts">
+                  <li class="header__social-items">
+                    <a href="tel:+380960000007">
+                      <svg class="header__icon" width="32px" height="32px">
+                        <use href="./images/icons.svg#icon-phoneHeader"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="header__social-items">
+                    <a href="#" target="_blank">
+                      <svg class="header__icon" width="32px" height="32px">
+                        <use
+                          href="./images/icons.svg#icon-facebookHeader"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="header__social-items">
+                    <a href="#" target="_blank">
+                      <svg class="header__icon" width="32px" height="32px">
+                        <use href="./images/icons.svg#icon-instHeader"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -69,13 +141,15 @@
         </div>
       </section>
       <div class="why-us-bg">
-        <section class="about-us-section section" id="about-us-section">
+        <section class="about-us-section" id="about-us-section">
           <div class="container">
             <div class="about-us-section__container">
               <div class="about-us-section__textblock">
-                <h2 class="about-us-section__title section__title">
+                <h2 class="about-us-section__title">
                   Reincarnate in the
-                  <span class="text-capital text-brand">beauty zone!</span>
+                  <span class="text-capital text-brand text-bold"
+                    >beauty zone!</span
+                  >
                 </h2>
                 <p class="about-us-section__text">
                   Our cosmetology clinic offers you professional services for
@@ -87,15 +161,28 @@
                   Our cosmetology procedures and preparations will help you
                   maintain your beauty and youth. Beauty is with us forever!
                 </p>
+                <div class="about-us-section__tablet-star animation-scale">
+                  <svg class="animation-spin-color" width="40" height="40">
+                    <use href="./images/icons.svg#icon-bottomStar"></use>
+                  </svg>
+                </div>
               </div>
               <div class="about-us-section__photos">
                 <img
                   class="about-us-section__before-photo about-us-section__photos-item"
+                  srcset="
+                    ./images/faceBefore.jpg    1x,
+                    ./images/faceBefore@2x.jpg 2x
+                  "
                   src="./images/faceBefore.jpg"
                   alt="Face before"
                 />
                 <img
                   class="about-us-section__after-photo about-us-section__photos-item"
+                  srcset="
+                    ./images/faceAfter.jpg    1x,
+                    ./images/faceAfter@2x.jpg 2x
+                  "
                   src="./images/faceAfter.jpg"
                   alt="Face after"
                 />
@@ -179,69 +266,135 @@
             <h2 class="section__title text-centered">
               Our <span class="text-brand">procedures</span>
             </h2>
-            <div class="procedures-section__container">
-              <!--Some pictures that goes through??? they'll be articles each with img like a bg-->
-              <button class="carousel-button" type="button">
-                <svg width="16" height="16">
-                  <use href="./images/icons.svg#icon-arrow"></use>
-                </svg>
-              </button>
-              <ul class="procedures-section__list">
-                <li class="procedures-section__item">
-                  <article class="procedures-card">
-                    <img
-                      class="procedures-card__image"
-                      src="./images/facialMasks.jpg"
-                      alt="Facial mask"
-                    />
-                    <p class="procedures-card__name text-centered">
-                      Facial <br />
-                      masks
-                    </p>
-                  </article>
-                </li>
-                <li class="procedures-section__item">
-                  <article class="procedures-card">
-                    <img
-                      class="procedures-card__image"
-                      src="./images/facialInjections.jpg"
-                      alt="Facial injection"
-                    />
-                    <p class="procedures-card__name text-centered">
-                      Facial injections
-                    </p>
-                  </article>
-                </li>
-                <li class="procedures-section__item">
-                  <article class="procedures-card">
-                    <img
-                      class="procedures-card__image"
-                      src="./images/facialCleansing.jpg"
-                      alt="Facial cleansing"
-                    />
-                    <p class="procedures-card__name text-centered">
-                      Facial cleansing
-                    </p>
-                  </article>
-                </li>
-              </ul>
+            <div class="procedures-section__slider">
               <button
-                class="carousel-button carousel-button--next"
+                class="procedures-section__button carousel-button prev"
                 type="button"
               >
                 <svg width="16" height="16">
                   <use href="./images/icons.svg#icon-arrow"></use>
                 </svg>
               </button>
-              <!--
-            three dots that showing current position I guess
-          -->
+              <div class="procedures-section__container swiper-container">
+                <ul class="procedures-section__list swiper-wrapper">
+                  <li class="swiper-slide">
+                    <article class="procedures-card">
+                      <img
+                        class="procedures-card__image"
+                        srcset="
+                          ./images/facialMasks.jpg    1x,
+                          ./images/facialMasks@2x.jpg 2x
+                        "
+                        src="./images/facialMasks.jpg"
+                        alt="Facial mask"
+                      />
+                      <p class="procedures-card__name text-centered">
+                        Facial <br />
+                        masks
+                      </p>
+                    </article>
+                  </li>
+                  <li class="swiper-slide">
+                    <article class="procedures-card">
+                      <img
+                        class="procedures-card__image"
+                        srcset="
+                          ./images/facialInjections.jpg    1x,
+                          ./images/facialInjections@2x.jpg 2x
+                        "
+                        src="./images/facialInjections.jpg"
+                        alt="Facial injection"
+                      />
+                      <p class="procedures-card__name text-centered">
+                        Facial injections
+                      </p>
+                    </article>
+                  </li>
+                  <li class="swiper-slide">
+                    <article class="procedures-card">
+                      <img
+                        class="procedures-card__image"
+                        srcset="
+                          ./images/facialCleansing.jpg    1x,
+                          ./images/facialCleansing@2x.jpg 2x
+                        "
+                        src="./images/facialCleansing.jpg"
+                        alt="Facial cleansing"
+                      />
+                      <p class="procedures-card__name text-centered">
+                        Facial cleansing
+                      </p>
+                    </article>
+                  </li>
+                  <li class="swiper-slide">
+                    <article class="procedures-card">
+                      <img
+                        class="procedures-card__image"
+                        srcset="
+                          ./images/facialMasks.jpg    1x,
+                          ./images/facialMasks@2x.jpg 2x
+                        "
+                        src="./images/facialMasks.jpg"
+                        alt="Facial mask"
+                      />
+                      <p class="procedures-card__name text-centered">
+                        Facial <br />
+                        masks
+                      </p>
+                    </article>
+                  </li>
+                  <li class="swiper-slide">
+                    <article class="procedures-card">
+                      <img
+                        class="procedures-card__image"
+                        srcset="
+                          ./images/facialInjections.jpg    1x,
+                          ./images/facialInjections@2x.jpg 2x
+                        "
+                        src="./images/facialInjections.jpg"
+                        alt="Facial injection"
+                      />
+                      <p class="procedures-card__name text-centered">
+                        Facial injections
+                      </p>
+                    </article>
+                  </li>
+                  <li class="swiper-slide">
+                    <article class="procedures-card">
+                      <img
+                        class="procedures-card__image"
+                        srcset="
+                          ./images/facialCleansing.jpg    1x,
+                          ./images/facialCleansing@2x.jpg 2x
+                        "
+                        src="./images/facialCleansing.jpg"
+                        alt="Facial cleansing"
+                      />
+                      <p class="procedures-card__name text-centered">
+                        Facial cleansing
+                      </p>
+                    </article>
+                  </li>
+                </ul>
+                <div class="pagination">
+                  <span class="pagination__bullet"></span>
+                  <span class="pagination__bullet"></span>
+                  <span class="pagination__bullet"></span>
+                </div>
+              </div>
+              <button
+                class="procedures-section__button carousel-button next"
+                type="button"
+              >
+                <svg width="16" height="16">
+                  <use href="./images/icons.svg#icon-arrow"></use>
+                </svg>
+              </button>
             </div>
           </div>
         </section>
       </div>
-
-      <section class="contacts-section section" id="contacts-section">
+      <section class="contacts-section" id="contacts-section">
         <div class="container">
           <h2 class="section__title text-centered">
             How to <span class="text-brand">find</span> us
@@ -250,8 +403,6 @@
             <iframe
               class="contacts-section__map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1539.2261261977992!2d30.51564267179956!3d50.44272497070114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef8b5f6338d%3A0x25c7f06ad686451c!2z0LHRg9C70YzQstCw0YAg0KLQsNGA0LDRgdCwINCo0LXQstGH0LXQvdC60LAsIDUsINCa0LjRl9CyLCDQo9C60YDQsNGX0L3QsCwgMDIwMDA!5e0!3m2!1suk!2sse!4v1713095931011!5m2!1suk!2sse"
-              width="600"
-              height="450"
               style="border: 0"
               allowfullscreen=""
               loading="lazy"
@@ -268,59 +419,61 @@
                   receive a gift
                 </p>
 
-                <div class="contacts-section__form-field input">
-                  <label class="input__label visually-hidden" for="user-name"
-                    >Your name and lastname</label
-                  >
-                  <input
-                    class="input__control"
-                    id="user-name"
-                    name="user-name"
-                    type="text"
-                    placeholder="Your name and lastname"
-                    minlength="5"
-                    maxlength="20"
-                    pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
-                    required
-                  />
-                </div>
+                <div class="contacts-section__input-form">
+                  <div class="contacts-section__form-field input">
+                    <label class="input__label visually-hidden" for="user-name"
+                      >Your name and lastname</label
+                    >
+                    <input
+                      class="input__control"
+                      id="user-name"
+                      name="user-name"
+                      type="text"
+                      placeholder="Your name and lastname"
+                      minlength="5"
+                      maxlength="20"
+                      pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+                      required
+                    />
+                  </div>
 
-                <div class="contacts-section__form-field input">
-                  <label class="input__label visually-hidden" for="user-tel"
-                    >Your phone number</label
-                  >
-                  <input
-                    class="input__control"
-                    id="user-tel"
-                    name="user-tel"
-                    type="tel"
-                    placeholder="Your phone number"
-                    pattern="^\+380[0-9]{9}"
-                    required
-                  />
-                </div>
+                  <div class="contacts-section__form-field input">
+                    <label class="input__label visually-hidden" for="user-tel"
+                      >Your phone number</label
+                    >
+                    <input
+                      class="input__control"
+                      id="user-tel"
+                      name="user-tel"
+                      type="tel"
+                      placeholder="Your phone number"
+                      pattern="^\+380[0-9]{9}"
+                      required
+                    />
+                  </div>
 
-                <div class="contacts-section__form-field input">
-                  <label class="input__label visually-hidden" for="user-email"
-                    >Your email</label
-                  >
-                  <input
-                    class="input__control"
-                    id="user-email"
-                    name="user-email"
-                    type="email"
-                    placeholder="Your email"
-                    required
-                  />
-                </div>
+                  <div class="contacts-section__form-field input">
+                    <label class="input__label visually-hidden" for="user-email"
+                      >Your email</label
+                    >
+                    <input
+                      class="input__control"
+                      id="user-email"
+                      name="user-email"
+                      type="email"
+                      placeholder="Your email"
+                      required
+                    />
+                  </div>
 
-                <button class="sign-up-button callback-button" type="submit">
-                  Sign up for free
-                </button>
-                <p class="form-terms">
-                  By clicking the button, I agree to the
-                  <a class="form-terms__link" href="#">privacy policy</a>
-                </p>
+                  <button class="sign-up-button callback-button" type="submit">
+                    Sign up for free
+                  </button>
+                  <p class="form-terms">
+                    By clicking the button, I agree to the
+                    <a class="form-terms__link" href="#">privacy policy</a>
+                  </p>
+                </div>
               </form>
             </div>
           </div>
@@ -329,89 +482,111 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <div class="footer-container">
-          <nav class="footer-nav">
-            <div class="footer-logo">
+        <div class="footer__container">
+          <nav class="footer__nav">
+            <div class="footer__logo">
               <a href="/">
-                <img src="./images/logo.svg" alt="Beauty Zone's logo" />
+                <img
+                  class="footer__logo-icon"
+                  src="./images/logo.svg"
+                  alt="Beauty Zone's logo"
+                />
               </a>
             </div>
-            <ul class="nav-menu">
-              <li class="nav-item">
-                <a class="link footer-link" href="#about-us-section"
+            <ul class="footer__nav-menu">
+              <li class="footer__nav-item">
+                <a class="link footer__link" href="#about-us-section"
                   >About us</a
                 >
               </li>
-              <li class="nav-item">
-                <a class="link footer-link" href="#why-us-section">Why we?</a>
+              <li class="footer__nav-item">
+                <a class="link footer__link" href="#why-us-section">Why we?</a>
               </li>
-              <li class="nav-item">
-                <a class="link footer-link" href="#procedures-section"
+              <li class="footer__nav-item">
+                <a class="link footer__link" href="#procedures-section"
                   >Our procedures</a
                 >
               </li>
-              <li class="nav-item">
-                <a class="link footer-link" href="#contacts-section"
+              <li class="footer__nav-item">
+                <a class="link footer__link" href="#contacts-section"
                   >Contacts</a
                 >
               </li>
             </ul>
           </nav>
-          <address class="footer-address">
-            <div class="address-content">
-              <ul class="address-list">
-                <li class="address-item">
-                  <a class="link footer-link" href="tel:+380960000007"
+          <address class="footer__address">
+            <div class="footer__address-content">
+              <ul class="footer__address-list">
+                <li class="footer__address-item">
+                  <a class="link footer__link" href="tel:+380960000007"
                     >+ 38 (096) 000 00 07</a
                   >
                 </li>
-                <li class="address-item">
-                  <a class="link footer-link" href="mailto:beautyzone@gmail.com"
+                <li class="footer__address-item">
+                  <a
+                    class="link footer__link"
+                    href="mailto:beautyzone@gmail.com"
                     >beautyzone@gmail.com</a
                   >
                 </li>
-                <li class="address-item">
+                <li class="footer__address-item">
                   <a
-                    class="link footer-link"
+                    class="link footer__link"
                     href="https://maps.app.goo.gl/39FNo8mpGoc4ged96"
                     target="_blank"
                     >Ukraine, Kyyiv, Blvd. Taras Shevchenko, 5</a
                   >
                 </li>
-                <li class="address-item">
-                  <ul class="address-icons">
-                    <li>
-                      <a href="tel:+380960000007">
-                        <svg class="footer-icon" width="42" height="42">
-                          <use href="./images/icons.svg#icon-phoneFooter"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">
-                        <svg class="footer-icon" width="42" height="42">
-                          <use
-                            href="./images/icons.svg#icon-facebookFooter"
-                          ></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">
-                        <svg class="footer-icon" width="42" height="42">
-                          <use href="./images/icons.svg#icon-instFooter"></use>
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
               </ul>
-            </div>
-            <div class="footer-policy">
-              <a class="link footer-link" href="#" target="_blank"
+              <a
+                class="footer__address-policy link footer__link"
+                href="#"
+                target="_blank"
                 >Privacy policy</a
               >
-              <p class="copyright">&copy; 2024 Copyright</p>
+              <div class="footer__address-icons">
+                <a href="tel:+380960000007">
+                  <svg class="footer__icon" width="42" height="42">
+                    <use href="./images/icons.svg#icon-phoneFooter"></use>
+                  </svg>
+                </a>
+                <a href="#" target="_blank">
+                  <svg class="footer__icon" width="42" height="42">
+                    <use href="./images/icons.svg#icon-facebookFooter"></use>
+                  </svg>
+                </a>
+                <a href="#" target="_blank">
+                  <svg class="footer__icon" width="42" height="42">
+                    <use href="./images/icons.svg#icon-instFooter"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="footer__policy">
+              <div class="footer__policy-icons footer__address-icons">
+                <a href="tel:+380960000007">
+                  <svg class="footer__icon" width="42" height="42">
+                    <use href="./images/icons.svg#icon-phoneFooter"></use>
+                  </svg>
+                </a>
+                <a href="#" target="_blank">
+                  <svg class="footer__icon" width="42" height="42">
+                    <use href="./images/icons.svg#icon-facebookFooter"></use>
+                  </svg>
+                </a>
+                <a href="#" target="_blank">
+                  <svg class="footer__icon" width="42" height="42">
+                    <use href="./images/icons.svg#icon-instFooter"></use>
+                  </svg>
+                </a>
+              </div>
+              <a
+                class="footer__policy-policy link footer__link"
+                href="#"
+                target="_blank"
+                >Privacy policy</a
+              >
+              <p class="footer__copyright">&copy; 2024 Copyright</p>
             </div>
           </address>
         </div>
@@ -420,7 +595,7 @@
     <div class="backdrop is-hidden">
       <div class="modal">
         <button class="modal__close-btn modal-close-btn" type="button">
-          close
+          <img src="./images/crossRequest.svg" alt="Close button" />
         </button>
         <h1 class="modal__title">
           Request <br />
@@ -490,5 +665,8 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/procedures-slider.js"></script>
   </body>
 </html>

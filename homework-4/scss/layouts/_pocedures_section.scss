@@ -1,18 +1,37 @@
 .procedures-section {
-  &__container {
+  &__slider {
     display: flex;
     align-items: center;
     gap: 32px;
   }
 
-  &__list {
-    display: flex;
-    gap: 30px 16px;
-    flex-wrap: wrap;
-    flex-grow: 1;
+  &__container {
+    // display: flex;
+    // gap: 12px 16px;
+    // flex-direction: column;
+    // flex-wrap: wrap;
+    // flex-grow: 1;
+    // justify-content: center;
+    overflow: hidden;
+
+    // @media screen and (min-width: $bp-tablet) {
+    //   gap: 30px 16px;
+    //   flex-direction: row;
+    // }
   }
 
-  &__item {
-    flex-basis: calc((100% - 16px * 2) / 3);
+  &__list {
+    margin-bottom: 32px;
   }
+
+  &__button {
+    display: none;
+
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
+    }
+  }
+  // &__item {
+  //   flex-basis: calc((100% - 16px * 2) / 3);
+  // }
 }

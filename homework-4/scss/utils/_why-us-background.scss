@@ -1,6 +1,6 @@
 .why-us-bg {
-  background-image: url('../images/2dSectionBg.svg');
-  background-position: 0px 600px;
+  background-image: url('../images/whyUsSectionBg.svg');
+  background-position: 0px 320px;
   background-repeat: no-repeat;
   background-size: cover;
   /* Костиль ще той, але я хз як спозиціонувати цей svg щоб було як у фігмі. 
@@ -9,4 +9,8 @@
   за макетом, а з 2+3 він тупо обрубається і плавно не виходить побачити той 
   градієнт. Поки так, а взагалі думаю це якось можна буде далі переробити 
   по-нормальному. На данному етапі не було жодної інфи по таким об'єктам */
+
+  @media screen and (min-width: $bp-tablet) {
+    background-position: 0px 620px;
+  }
 }
