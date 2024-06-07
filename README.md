@@ -12,5 +12,6 @@
 ---
 
 [Homework 1](https://kirossa.github.io/homeworks/jsModule/hw1/)<br/>
+[Homework 2](https://kirossa.github.io/homeworks/jsModule/hw2/)<br/>
 
 > **More to come!**
